@@ -11,7 +11,7 @@
    ========================================================================== */
 
 html {
-    color: #222;
+    color: #fff;
     font-size: 1em;
     line-height: 1.4;
 }
@@ -25,13 +25,28 @@ html {
  */
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #24bcb7;
+    color: white;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #24bcb7;
+    color: white;
     text-shadow: none;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #000000;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #000000;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #000000;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #000000;
 }
 
 /*
@@ -95,13 +110,15 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
-.center{
-    display: flex;
-    background-color: #202020;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-weight: 300;
+    margin-top:0.6rem;
+    margin-bottom: 0.6rem;
 }
 
 
@@ -110,6 +127,81 @@ img{
     max-width: 100%;
     height: auto;
 }
+
+
+.blue{
+    color:#24bcb7;
+
+}
+
+.bg-image{
+        background-color: #1A1A1A;
+    }
+
+@media only screen and (min-width: 48em){
+    .bg-image{
+        background: url("../img/fondo.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+
+}
+
+.logo{
+    border-bottom: 1px dashed white;
+    width: 50%;
+    padding-bottom: 1rem;
+
+}
+
+    .logo figure{
+        max-width:300px;
+        height: auto;
+        display: block;
+        margin:auto;
+    }
+
+.form{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.form-control{
+    background-color: #24bcb7;
+    color:#000;
+    border:0;
+    padding: 0.4rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+
+
+.button{
+    background-color: transparent;;
+    border:1px solid #fff;
+    padding: 0.5rem;
+    transition:all 0.3s ease-in;
+}
+
+    .button:hover{
+        background-color: #24bcb7;;
+        color: #fff;
+    }
 
 
 
